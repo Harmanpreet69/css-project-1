@@ -1,65 +1,294 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/*
- * [Modified] Modern CSS Reset
- * @link https://github.com/hankchizljaw/modern-css-reset
-*/
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-/* Set core body defaults */
 body {
-  min-height: 100vh;
-  font-size: 100%;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
-  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #362600;
+  background-color: #ffebcd;
 }
 
-/* Make images easier to work with */
-img {
-  display: block;
-  max-width: 100%;
+a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+a:hover {
+  text-decoration: underline;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+/* Responsive container styling */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
   }
 }
 
-body {
-  font-family: "Poppins", sans-serif;
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* Skip */
+.skip-link {
+  color: black;
+  border: 1px solid black;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1rem;
+  margin: 2rem 0 0 2rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.skip-link:hover {
+  background-color: #f7a72f;
+}
+
+/* Header*/
+header {
+  position: relative;
+  width: 60%;
+  margin: 6rem auto;
+  border-radius: 0.6rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Link*/
+.link-github {
+  color: black;
+  background-color: #ffb84f;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.link-github:hover {
+  background-color: #f7a72f;
+}
+
+.link-github svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+  margin-bottom: -0.2em;
+  fill: currentColor;
+}
+
+/* Navigation */
+nav {
+  background-color: #fff2df;
+  padding: 2rem 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+/* md */
+@media (min-width: 1024px) {
+  nav ul {
+    gap: 5rem;
+    flex-direction: row;
+  }
+}
+
+nav a {
+  color: #362600;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for the aside.profile */
+.profile {
+  background-color: #fff2df;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-radius: 0.6rem;
+}
+
+.profile h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile li {
+  margin-bottom: 0.5rem;
+}
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile a:hover {
+  text-decoration: underline;
+}
+
+aside {
+  width: 70%;
+  margin: auto;
+}
+
+/* Styles for the aside#styles */
+#styles {
+  background-color: #fff2df;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+}
+
+#styles h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  margin-bottom: 1rem;
+}
+
+.features a {
+  text-decoration: none;
+}
+
+.features a:hover {
+  text-decoration: underline;
+}
+
+.link-allstyles {
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.link-allstyles:hover {
+  text-decoration: underline;
+}
+
+/* Styles for the footer.page-footer */
+.page-footer {
+  background-color: #fff2df;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+  text-align: center;
+}
+
+.page-footer p {
+  margin-bottom: 1rem;
+}
+
+.page-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-footer li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.page-footer a {
+  color: #362600;
+  text-decoration: none;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for articles */
+article {
+  width: 70%;
+  margin: auto;
+  background-color: #fff2df;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+article p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
